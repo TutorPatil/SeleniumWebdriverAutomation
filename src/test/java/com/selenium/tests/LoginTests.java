@@ -54,7 +54,7 @@ public class LoginTests extends BaseClass{
 		
 		driver.findElement(By.xpath(getLocatorData("Logout_Link"))).click();
 		
-		
+	// comment	
 	}
 	
 	
