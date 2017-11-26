@@ -54,10 +54,10 @@ public class LoginTests extends BaseClass{
 		}
 		catch(Exception e)
 		{
-			writeLogs("could not login.....the logout link not present");
+			writeLogs("Logged in to actitime...expected  to fail");
 		}				
 		
-		Assert.assertTrue(result, "could not login to actitime");
+		Assert.assertFalse(result, "Logged in to actitime, expected login to fail");
 		
 		driver.findElement(By.xpath(getLocatorData("Logout_Link"))).click();
 		
