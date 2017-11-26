@@ -33,37 +33,24 @@ public class LoginTests extends BaseClass{
 	
 	
 	@Test
-	public static void InvalidLogin_001() throws Exception
+	public static void Login_002() throws Exception
 	{
 		// Loging in to the actitime application
 		driver.findElement(By.xpath(getLocatorData("UserName_EditBox"))).sendKeys(getTestData("UserName_EditBox"));
 		
-		driver.findElement(By.xpath(getLocatorData("Password_EditBox"))).sendKeys(getTestData("Password_EditBox")+"invalid");
+		driver.findElement(By.xpath(getLocatorData("Password_EditBox"))).sendKeys(getTestData("Password_EditBox"));
 		
 		
 		driver.findElement(By.xpath(getLocatorData("Login_Button"))).click();
 		
 		Thread.sleep(5000);
 		
-		boolean result = false;
+		boolean result = driver.findElement(By.xpath(getLocatorData("Logout_Link"))).isDisplayed();
+				
 		
-		try {
-			
-			result = driver.findElement(By.xpath(getLocatorData("UserName_EditBox"))).isDisplayed();
-			
-		}
-		catch(Exception e)
-		{
-			writeLogs("Logged in to actitime...expected  to fail");
-		}				
-		
-		// Adding a comment to check the build trigger by jenkins
-		Assert.assertTrue(result, "Logged in to actitime, expected login to fail");
+		Assert.assertTrue(result, "could not login to actitime");
 		
 		driver.findElement(By.xpath(getLocatorData("Logout_Link"))).click();
-		
-		
-		
 		
 	}
 
