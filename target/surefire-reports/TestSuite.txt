@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 67.418 sec <<< FAILURE! - in TestSuite
+InvalidLogin_001(com.selenium.tests.LoginTests)  Time elapsed: 25.479 sec  <<< FAILURE!
+java.lang.AssertionError: could not login to actitime expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at com.selenium.tests.LoginTests.InvalidLogin_001(LoginTests.java:60)
+

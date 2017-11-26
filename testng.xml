@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+ 
+<suite name="Regression" verbose="1" >
+
+<listeners>
+    <listener class-name="com.selenium.base.BaseClass" />
+ </listeners>
+
+
+ <test name="Regression">  
+ 
+    <classes>
+      <class name="com.selenium.tests.LoginTests" />
+    
+    </classes>
+    
+    
+    
+ </test>
+ 
+ 
+  
+</suite>
