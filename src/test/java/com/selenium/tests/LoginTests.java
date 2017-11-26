@@ -32,8 +32,10 @@ public class LoginTests extends BaseClass{
 	}
 	
 	
+	
+	
 	@Test
-	public static void Login_002() throws Exception
+	public static void login_002() throws Exception
 	{
 		// Loging in to the actitime application
 		driver.findElement(By.xpath(getLocatorData("UserName_EditBox"))).sendKeys(getTestData("UserName_EditBox"));
@@ -52,7 +54,10 @@ public class LoginTests extends BaseClass{
 		
 		driver.findElement(By.xpath(getLocatorData("Logout_Link"))).click();
 		
+		
 	}
+	
+	
 
 
 }
