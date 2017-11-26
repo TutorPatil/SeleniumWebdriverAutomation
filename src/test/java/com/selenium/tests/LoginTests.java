@@ -49,7 +49,7 @@ public class LoginTests extends BaseClass{
 		
 		try {
 			
-			result = driver.findElement(By.xpath(getLocatorData("Logout_Link"))).isDisplayed();
+			result = driver.findElement(By.xpath(getLocatorData("UserName_EditBox"))).isDisplayed();
 			
 		}
 		catch(Exception e)
@@ -58,7 +58,7 @@ public class LoginTests extends BaseClass{
 		}				
 		
 		// Adding a comment to check the build trigger by jenkins
-		Assert.assertFalse(result, "Logged in to actitime, expected login to fail");
+		Assert.assertTrue(result, "Logged in to actitime, expected login to fail");
 		
 		driver.findElement(By.xpath(getLocatorData("Logout_Link"))).click();
 		
